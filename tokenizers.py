@@ -10,7 +10,7 @@ class tokenizers:
         self.sentokenizer = sentokenizer
         self.wordtokenizer = wordtokenizer
         self.stemer = stemer
-        
+
     def word_tokenizer(tokenizer, input):
         word_input = input.to_string()
         word_token = tokenizer(word_input)

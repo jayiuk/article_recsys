@@ -4,8 +4,9 @@ class encoding:
         self.encoder = encoder
 
     def encoding(input, encoder):
+        word_list = []
         for word in input:
             word = word.lower()
-            
+            word_list.append(word)
         return encoded
     

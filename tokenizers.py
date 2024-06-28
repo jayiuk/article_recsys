@@ -8,10 +8,14 @@ def word_tokenizer(tokenizer, input):
     word_token = tokenizer(word_input)
     return word_token
 
+def sentword_tokenizer(sent2wordtokenizer, input):
+    sent2word = sent2wordtokenizer(input)
+    return sent2word
+
 def sentence_tokenizer(sentokenizer, input, wordtokenizer):
     sentence_input = input.to_string()
     sentence_out = sentokenizer(sentence_input)
-    sentence2word_token = [word_tokenizer(wordtokenizer, sentence) for sentence in sentence_out]
+    sentence2word_token = [sentword_tokenizer(wordtokenizer, sentence) for sentence in sentence_out]
     return sentence2word_token
 
 def stemming(stemer, input):
@@ -20,4 +24,6 @@ def stemming(stemer, input):
 
 data = pd.read_csv('./view_arti.csv.')
 word1 = word_tokenizer(wordpunct_tokenize, data['Title'])
+sent1 = sentence_tokenizer(sent_tokenize, data['Content'], wordpunct_tokenize)
 print(word1)
+print(sent1)

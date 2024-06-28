@@ -3,10 +3,10 @@ class encoding:
         self.input = input
         self.encoder = encoder
 
-    def encoding(input, encoder):
+    def vocab(input):
         word_list = []
         for word in input:
             word = word.lower()
             word_list.append(word)
-        return encoded
+        return vocab
     

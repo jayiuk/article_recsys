@@ -4,6 +4,13 @@ from nltk.tokenize import sent_tokenize
 import pandas as pd
 
 class tokenizers:
+    def __init__(self, input, tokenizer, sentokenizer, wordtokenizer, stemer):
+        self.input = input
+        self.tokenizer = tokenizer
+        self.sentokenizer = sentokenizer
+        self.wordtokenizer = wordtokenizer
+        self.stemer = stemer
+        
     def word_tokenizer(tokenizer, input):
         word_input = input.to_string()
         word_token = tokenizer(word_input)

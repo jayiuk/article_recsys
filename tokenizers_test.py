@@ -1,3 +1,8 @@
+from tensorflow.keras.preprocessing.text import text_to_word_sequence
+from nltk.tokenize import wordpunct_tokenize
+from nltk.tokenize import sent_tokenize
+import pandas as pd
+
 class tokenizers:
     def __init__(self, input, tokenizer, sentokenizer, wordtokenizer, stemer):
         self.input = input
@@ -20,3 +25,9 @@ class tokenizers:
     def stemming(stemer, input):
         stem_out = [stemer.stem(word) for word in input]
         return stem_out
+
+data = pd.read_csv('./view_arti.csv.')
+word1 = tokenizers.word_tokenizer(wordpunct_tokenize, data['Title'])
+sent1 = tokenizers.sentence_tokenizer(sent_tokenize, data['Content'], wordpunct_tokenize)
+print(type(word1))
+print(type(sent1))

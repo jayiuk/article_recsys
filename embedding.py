@@ -5,3 +5,4 @@ class embedding:
 
     def embed(embedder, input):
         w2v = embedder(input)
+        return w2v

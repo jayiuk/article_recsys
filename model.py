@@ -13,6 +13,6 @@ class CNN(nn.Module):
 
     def conv1d_1(input_channels, output_channels, kernel_size):
         model = nn.Sequentila(
-            nn.Conv1d(input_channels, output_channels, kernel_size)
+            nn.Conv1d(input_channels, output_channels, kernel_size),
             nn.ReLU()
         )

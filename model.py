@@ -36,3 +36,8 @@ class CNN(nn.Module):
             nn.ReLU()
         )
         return pooling
+    
+    def lstm():
+    
+    def forward(x):
+        

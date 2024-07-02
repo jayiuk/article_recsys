@@ -17,5 +17,7 @@ class CNNlstm(nn.Module):
         )
 
    
-    def forward(x):
-        out = conv1d_1(x)
+    def forward(x, self):
+        out = self.layer_1(x)
+        out = self.layer_2(out)
+        

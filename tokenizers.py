@@ -1,10 +1,11 @@
 class tokenizers:
-    def __init__(self, input, tokenizer, sentokenizer, wordtokenizer, stemer):
+    def __init__(self, input, tokenizer, sentokenizer, wordtokenizer, stemer, word):
         self.input = input
         self.tokenizer = tokenizer
         self.sentokenizer = sentokenizer
         self.wordtokenizer = wordtokenizer
         self.stemer = stemer
+        self.word = word
 
     def word_tokenizer(tokenizer, input):
         word_input = input.to_string()
